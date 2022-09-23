@@ -57,7 +57,7 @@ export default function Banner(){
     data-bs-slide="prev"
   >
     <span className="carousel-control-prev-icon" aria-hidden="true" />
-    <span className="visually-hidden">Previous</span>
+    <span className="visually-hidden">Previfous</span>
   </button>
   <button
     className="carousel-control-next"
