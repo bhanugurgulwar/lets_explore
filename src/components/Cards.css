@@ -1,0 +1,13 @@
+.pop-out{
+    transition: transfrom 2s;
+}
+
+
+.pop-out:hover{
+     transform: scale(1.1);
+}
+
+.wishlist-icon{
+    width: 0.9375rem;
+    height: 0.9375rem;
+}

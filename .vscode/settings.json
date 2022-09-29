@@ -1,0 +1,19 @@
+{
+	"editor.formatOnPaste": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.bracketSameLine": true,
+	"prettier.insertPragma": true,
+	"prettier.requireConfig": true,
+	"prettier.requirePragma": true,
+	"prettier.resolveGlobalModules": true,
+	"prettier.singleAttributePerLine": true,
+	"editor.formatOnSave": true,
+	"editor.formatOnType": false,
+	"prettier.jsxSingleQuote": true,
+	"typescript.format.insertSpaceBeforeFunctionParenthesis": false,
+	"prettier.enableDebugLogs": true,
+	"prettier.singleQuote": true,
+	"prettier.useTabs": true,
+	"prettier.vueIndentScriptAndStyle": true,
+	"prettier.withNodeModules": true
+}

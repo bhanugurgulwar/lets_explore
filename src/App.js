@@ -1,14 +1,20 @@
 
 import './App.css';
 import Navbar from './components/nav';
-import Banner from './components/Banner';
 import Main from './components/Main';
+import Footer from './components/Footer';
+import {useState} from 'react'
 
 function App() {
+  const [explore,setExplore] = useState([]);
+  const [wishlist,setWishlist] = useState([]);
+
+  // console.log(wishlist)
   return (
     <div className="App">
-      <Navbar />
-      <Main />
+      <Navbar explore={explore}/>
+      <Main explore={explore} setExplore={setExplore} wishlist={wishlist} setWishlist={setWishlist}/>
+      <Footer />
     </div>
   );
 }
