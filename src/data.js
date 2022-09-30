@@ -1,42 +1,18 @@
 export default [
     {
-        id:1,
-        img:"https://vl-prod-static.b-cdn.net/system/images/000/534/867/7c4458b693ac99b7787872477978563d/original/image1.jpg?1637304652",
-        title:"Rajgad Trek",
-        description:`Some quick example text to build on the card title and make up the bulk of the card's content.`,
-        list1:"One day stay",
-        list2:"Transportation Available",
-        isAdded:false,
-        count:1,
-        seats:30,
-        isWishlist:true
+       id:1,
+       img:"https://assets.cntraveller.in/photos/612e364fb38031cf6952f909/16:9/w_1024%2Cc_limit/Kaas%2520Plateau-P93XPR.jpg",
+       title:"Kaas Pathar",
+       description:`Some quick example text to build on the card title and make up the bulk of the card's content.`,
+       list1:"One day stay",
+       list2:"Transportation Available",
+       isAdded:false,
+       count:1,
+       seats:30,
+       isWishlist:false 
     },
-     {
+    {
         id:2,
-        img:"https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/ae/b6/cc.jpg",
-        title:"Sinhagad Trek",
-        description:`Some quick example text to build on the card title and make up the bulk of the card's content.`,
-        list1:"One day and One Night stay",
-        list2:"Transportation Available",
-        isAdded:false,
-        count:1,
-        seats:30,
-        isWishlist:false,
-    },
-     {
-        id:3,
-        img:"https://vl-prod-static.b-cdn.net/system/images/000/534/867/7c4458b693ac99b7787872477978563d/original/image1.jpg?1637304652",
-        title:"Rajgad Trek",
-        description:`Some quick example text to build on the card title and make up the bulk of the card's content.`,
-        list1:"One day stay",
-        list2:"Transportation Available",
-        isAdded:false,
-        count:1,
-        seats:30,
-        isWishlist:true
-    },
-     {
-        id:4,
         img:"https://vl-prod-static.b-cdn.net/system/images/000/534/867/7c4458b693ac99b7787872477978563d/original/image1.jpg?1637304652",
         title:"Rajgad Trek",
         description:`Some quick example text to build on the card title and make up the bulk of the card's content.`,
@@ -48,9 +24,33 @@ export default [
         isWishlist:false
     },
      {
+        id:3,
+        img:"https://punetourism.co.in/images/places-to-visit/headers/sinhagad-fort-pune-tourism-entry-fee-timings-holidays-reviews-header.jpg",
+        title:"Sinhagad Trek",
+        description:`Some quick example text to build on the card title and make up the bulk of the card's content.`,
+        list1:"One day and One Night stay",
+        list2:"Transportation Available",
+        isAdded:false,
+        count:1,
+        seats:30,
+        isWishlist:false,
+    },
+    {
+       id:4,
+       img:"https://trekfitadventures.com/wp-content/uploads/2021/07/Devkund.jpeg",
+       title:"Devkund Waterfall",
+       description:`Some quick example text to build on the card title and make up the bulk of the card's content.`,
+       list1:"No stay",
+       list2:"Transportation Available",
+       isAdded:false,
+       count:1,
+       seats:30,
+       isWishlist:false
+   },
+     {
         id:5,
-        img:"https://vl-prod-static.b-cdn.net/system/images/000/534/867/7c4458b693ac99b7787872477978563d/original/image1.jpg?1637304652",
-        title:"Rajgad Trek",
+        img:"https://admin.banbanjara.com/public/frontend/uploads/product/1607078777092-LohagadFortsightseeing.jpg",
+        title:"Lohagad Trek",
         description:`Some quick example text to build on the card title and make up the bulk of the card's content.`,
         list1:"One day stay",
         list2:"Transportation Available",
@@ -61,8 +61,20 @@ export default [
     },
      {
         id:6,
-        img:"https://vl-prod-static.b-cdn.net/system/images/000/534/867/7c4458b693ac99b7787872477978563d/original/image1.jpg?1637304652",
-        title:"Rajgad Trek",
+        img:"https://www.onacheaptrip.com/wp-content/uploads/Sunrise-hues-at-Harishchandragad-Fort-Trek.jpg",
+        title:"Harishchandragad Trek",
+        description:`Some quick example text to build on the card title and make up the bulk of the card's content.`,
+        list1:"One day stay",
+        list2:"Transportation Available",
+        isAdded:false,
+        count:1,
+        seats:30,
+        isWishlist:false
+    },
+     {
+        id:7,
+        img:"https://images.thrillophilia.com/image/upload/s--jo9Kau7F--/c_fill,h_775,q_auto,w_1600/f_auto,fl_strip_profile/v1/images/photos/000/103/965/original/1484288851_Vasota_image_1.jpg.jpg?1484288851",
+        title:"Vasota Jungle Trek",
         description:`Some quick example text to build on the card title and make up the bulk of the card's content.`,
         list1:"One day stay",
         list2:"Transportation Available",
@@ -71,17 +83,5 @@ export default [
         seats:30 ,
         isWishlist:false
     },
-     {
-        id:7,
-        img:"https://vl-prod-static.b-cdn.net/system/images/000/534/867/7c4458b693ac99b7787872477978563d/original/image1.jpg?1637304652",
-        title:"Torna Trek",
-        description:`Some quick example text to build on the card title and make up the bulk of the card's content.`,
-        list1:"One day stay",
-        list2:"Transportation Available",
-        isAdded:false,
-        count:1,
-        seats:30,
-        isWishlist:false  
-    }
 ]
 

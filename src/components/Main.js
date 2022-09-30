@@ -1,17 +1,16 @@
-import { GiMachineGun } from "react-icons/gi";
 import Cards from "./Cards";
 import Banner from "./Banner";
 import Treks from "../data";
-import React,{useState} from "react";
+import React from "react";
 
 export default function main(props){
-    
+  
 
     const card=Treks.map((i,id)=>{return (
-        <Cards key={id} {...i} explore={props.explore} setExplore={props.setExplore} /> 
+        <Cards key={id} {...i} explore={props.explore} setExplore={props.setExplore} wishlist={props.wishlist} setWishlist={props.setWishlist}/> 
     )}
         
-
+       
 
     )
     return(

@@ -9,10 +9,11 @@ function App() {
   const [explore,setExplore] = useState([]);
   const [wishlist,setWishlist] = useState([]);
 
-  // console.log(wishlist)
+    console.log(wishlist)
+
   return (
     <div className="App">
-      <Navbar explore={explore}/>
+      <Navbar explore={explore} wishlist={wishlist} />
       <Main explore={explore} setExplore={setExplore} wishlist={wishlist} setWishlist={setWishlist}/>
       <Footer />
     </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import Form from './Form'
 
 export default function footer(){
 
@@ -7,7 +8,7 @@ export default function footer(){
     }
 
     return (
-        <div className='container-fluid footer d-flex bg-dark bottom text-white '>
+        <div className='container-fluid footer d-flex justify-content-around bg-dark bottom text-white '>
 
             <div className='footer-details'>   
                 <img style={styles} src="https://www.pngall.com/wp-content/uploads/1/Trekking-PNG-HD.png" alt="trekkers logo" />
@@ -42,18 +43,8 @@ export default function footer(){
             <div className='foot--nav'>  
 
             </div>
-            <div className='footer--form '>  
-                <form className='flex-cloumn' action="">
-                    <input type="text" 
-                        placeholder='Name' />
-                    <input type="email" 
-                        name="email"
-                        id="email"
-                        placeholder='Email' />
-                    <textarea name="" id="" cols="30" rows="5"
-                        placeholder='Comments ...' />
-                    <button>Post !</button>
-                </form>
+            <div className='footer--form w-25 h-100 '>  
+                <Form />
              </div>
         </div>
     )

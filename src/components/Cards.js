@@ -1,12 +1,13 @@
 import React from "react";
 import "./Cards.css"
 import {cloneDeep} from 'lodash'
-import Treks from "../data";
+
 
 
 export default function cards(props) {
  
-  function add(props){
+    
+  function book(props){
     
     let temp=cloneDeep(props.explore)
     if(temp.find((i)=> i.id === props.id)){
@@ -20,16 +21,48 @@ export default function cards(props) {
     }
   }
   
+  function addToWishlist(props){
+   
+      let tempWishlist=cloneDeep(props.wishlist)
+      if(tempWishlist.find((i) => i.id===props.id )){
+         let index = tempWishlist.findIndex((i) => i.id === props.id)
+         tempWishlist[index].isWishlist = !tempWishlist[index].isWishlist
+          
+          props.setWishlist(tempWishlist);
+        
+     
+      }
+      else{
+        const{id,title ,img,price,isWishlist,isAdded}=props
+        tempWishlist.push({id,title ,img,price,isWishlist,isAdded})
+          let index = tempWishlist.findIndex((i) => i.id === props.id)
+         tempWishlist[index].isWishlist = !tempWishlist[index].isWishlist
 
+        props.setWishlist(tempWishlist)
+        
+      }
+       
+  }
+
+  let index=props.wishlist.findIndex(i=>i.id===props.id)
   
- 
+  function removeWishlist(props){
+
+    let tempp = cloneDeep(props.wishlist)
+    tempp = tempp.filter((i)=> i.id !== props.id)
+    props.setWishlist(tempp)
+
+    
+  }
+  
+  
   
   const styles={
     height:"9.375rem"
   }
 
   return (
-    <div className="card m-2 pop-out" style={{ width: "18rem" }}>
+    <div className="card m-3 pop-out" style={{ width: "18rem" }}>
       <img src={props.img} style={styles}
        className="card-img-top" alt="..." />
       <div className="card-body">
@@ -43,14 +76,17 @@ export default function cards(props) {
         <li className="list-group-item">{props.list2}</li>
       </ul>
       <div className="card-body d-flex justify-content-between ">
-       <button className="btn bg-success m-lg-2 text-white" onClick={()=>add(props)} > 
+       <button className="btn bg-success m-lg-2 text-white" onClick={()=>book(props)} > 
           Book Seat
         </button>
-        <img className="wishlist-icon" src={props.isWishlist?"wishlist-filled.png":"wishlist-empty.png"}
-           alt="wishlist" />
+        <img className="wishlist-icon" src={index < 0 ? "wishlist-empty.png" : props.wishlist[index].isWishlist?"wishlist-filled.png":"wishlist-empty.png"}
+          onClick={()=>{index < 0 ? addToWishlist(props) : props.wishlist[index].isWishlist? removeWishlist(props): addToWishlist(props)}} alt="wishlist" />
         
       </div>
     </div>
 
   );
 }
+
+
+//  

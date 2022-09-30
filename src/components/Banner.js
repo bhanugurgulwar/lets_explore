@@ -93,7 +93,7 @@ export default function Banner() {
             </div>
           </div>
         </div>
-        <div className="trend2 shadow p-1 m-2 mx-1 h-50" >
+        <div className="trend2 shadow p-1 m-2 mx-1 h-50 " >
           <div className="card text-bg-dark text-white">
             <img src="https://mews.in/wp-content/uploads/2021/12/Forts-of-Maharashtra-696x365.jpg" className="card-img" alt="..." />
             <div className="card-img-overlay">
