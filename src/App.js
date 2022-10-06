@@ -3,17 +3,24 @@ import './App.css';
 import Navbar from './components/nav';
 import Main from './components/Main';
 import Footer from './components/Footer';
-// import  Wishlist  from './components/Wishlist';
 import Explore from './components/Explore';
-import {useState} from 'react'
+import Login from './components/Login';
+import {useState,useEffect} from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Wishlist from './components/Wishlist';
 
 function App() {
-  const [explore,setExplore] = useState([]);
-  const [wishlist,setWishlist] = useState([]);
+  const [explore,setExplore] = useState(JSON.parse(localStorage.getItem('explore'))||[]);
+  const [wishlist,setWishlist] = useState(JSON.parse(localStorage.getItem('wishlist'))||[]);
 
-    console.log(wishlist)
+  useEffect(()=>{
+    localStorage.setItem('explore',JSON.stringify(explore))
+  },[explore])
+
+    useEffect(()=>{
+    localStorage.setItem('wishlist',JSON.stringify(wishlist))
+  },[wishlist])
+ 
 
   return (
     <Router>
@@ -21,7 +28,13 @@ function App() {
         <Navbar explore={explore} wishlist={wishlist} />
         <div> 
           <Routes>
-            <Route exact path='/' element={<> <Main explore={explore}
+
+
+            <Route exact path='/' element={<> 
+               <Login />
+            </>}/> 
+            
+            <Route exact path='/home' element={<> <Main explore={explore}
              setExplore={setExplore} wishlist={wishlist} 
               setWishlist={setWishlist}/> </>}/>
                

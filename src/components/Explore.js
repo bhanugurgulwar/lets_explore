@@ -3,7 +3,6 @@ import {cloneDeep} from 'lodash'
 
 export default function Explore({explore,setExplore}) {
 
-    console.log(explore)
     
     const check =explore.map((co)=>{
         return(
@@ -58,6 +57,20 @@ export default function Explore({explore,setExplore}) {
       }
     }
 
+    // explore.forEach(element => {
+              
+    //           let total
+    //           let sum= element.count * element.price
+    //           total+=sum
+    //           return total
+    //   })
+    let total=0;
+    for(let i =0;i<explore.length;i++){
+      let sum=explore[i].count * explore[i].price
+      total+=sum;
+    }
+   
+
   return (
     
     <div className='container d-flex flex-column p-2 m-3'>Explore
@@ -67,13 +80,7 @@ export default function Explore({explore,setExplore}) {
     {
       explore.length > 0 ? 
          <div className='d-flex justify-content-between'>
-            <h3>Total amount is {explore.forEach(element => {
-              
-              let total
-              let sum= element.count * element.price
-              total+=sum;
-              return total
-             })} </h3>
+            <h3>Total amount is ₹ {total} </h3>
             <button className='btn btn-success'>Buy</button> 
        </div> :
        <h3>You Have Not Booked Anything To Explore</h3>

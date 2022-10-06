@@ -14,7 +14,7 @@ export default function navbar(props) {
           </div>
 
           <div>
-          <Link  className="text-decoration-none" to={"/"}>
+          <Link  className="text-decoration-none" to={"/home"}>
             <p className="navbar-brand  text-white  ">Let's Explore</p>
           </Link>
           </div>

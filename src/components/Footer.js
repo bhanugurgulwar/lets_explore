@@ -15,7 +15,12 @@ export default function footer(){
                 <img style={styles} src="https://www.pngall.com/wp-content/uploads/1/Trekking-PNG-HD.png" alt="trekkers logo" />
                 <h3>Lets explore</h3>
                 <p>
-                    copyright @ 
+                   <code>
+                    copyright @ <br />
+                    this website belong to <br />
+                    Bhanudas Gurgulwar <br />
+                     </code> 
+                    
                 </p>
             </div>
             <div className='foot'>  
