@@ -14,10 +14,11 @@ export default function Form() {
     const handleChange = (event) => {
         // console.log(event.target)
         const{name,value}=event.target;
+        
         setFormData((prevFormData)=>{
          return{
              ...prevFormData,
-                name:value
+                [name]:value
               }
         } )
     }
@@ -32,13 +33,13 @@ export default function Form() {
     <div>
         <form className='flex-cloumn' onSubmit={handleSubmit}>
 
-            <input type="text" 
+            <input type="text"  className='input-group m-1'
                 placeholder='Name'
                 value={formData.name} 
                 onChange={handleChange}
             />
 
-            <input type="email" 
+            <input type="email" className='input-group m-1'
                 name="email"
                 id="email"
                 placeholder='Email'
@@ -46,13 +47,14 @@ export default function Form() {
                 onChange={handleChange}
             />
 
-            <textarea name="" id="" cols="30" rows="5"
+            <textarea className='input-group m-1' 
+                name="" id="" cols="30" rows="5"
                 placeholder='Comments ...' 
                 value={formData.comments}
                 onChange={handleChange}
             />
 
-            <button>Post !</button>
+            <button className='btn btn-primary m-1' >Post !</button>
 
          </form>
     </div>

@@ -15,8 +15,8 @@ export default function cards(props) {
       temp[index].count = temp[index].count+1; 
       props.setExplore(temp);
     }else{
-      const {id,title, img, price,count} =props
-      temp.push({id,title,img,price,count})
+      const {id,title, img, price,count,description} =props
+      temp.push({id,title,img,price,count,description})
       props.setExplore(temp)
     }
   }
@@ -33,8 +33,8 @@ export default function cards(props) {
      
       }
       else{
-        const{id,title ,img,price,isWishlist,isAdded}=props
-        tempWishlist.push({id,title ,img,price,isWishlist,isAdded})
+        const{id,title ,img,price,isWishlist,isAdded,description}=props
+        tempWishlist.push({id,title ,img,price,isWishlist,isAdded,description})
           let index = tempWishlist.findIndex((i) => i.id === props.id)
          tempWishlist[index].isWishlist = !tempWishlist[index].isWishlist
 
@@ -65,22 +65,29 @@ export default function cards(props) {
     <div className="card m-3 pop-out" style={{ width: "18rem" }}>
       <img src={props.img} style={styles}
        className="card-img-top" alt="..." />
-      <div className="card-body">
+      <div className="card-body border-0">
         <h5 className="card-title">{props.title}</h5>
         <p className="card-text">
         {props.description}
         </p>
       </div>
-        <ul className="list-group list-group-flush">
-        <li className="list-group-item">{props.list1}</li>
-        <li className="list-group-item">{props.list2}</li>
-      </ul>
-      <div className="card-body d-flex justify-content-between ">
+      <div>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">{props.list1}</li>
+            <li className="list-group-item"> ₹ {props.price}</li>
+          </ul>
+      </div>
+     
+      <div className="card-body d-flex justify-content-between border-0">
        <button className="btn bg-success m-lg-2 text-white" onClick={()=>book(props)} > 
           Book Seat
         </button>
-        <img className="wishlist-icon" src={index < 0 ? "wishlist-empty.png" : props.wishlist[index].isWishlist?"wishlist-filled.png":"wishlist-empty.png"}
-          onClick={()=>{index < 0 ? addToWishlist(props) : props.wishlist[index].isWishlist? removeWishlist(props): addToWishlist(props)}} alt="wishlist" />
+        <img className="wishlist-icon" 
+        src={index < 0 ? "wishlist-empty.png" : props.wishlist[index].isWishlist?
+        "wishlist-filled.png":"wishlist-empty.png"}
+          
+          onClick={()=>{index < 0 ? addToWishlist(props) : props.wishlist[index].isWishlist? 
+          removeWishlist(props): addToWishlist(props)}} alt="wishlist" />
         
       </div>
     </div>

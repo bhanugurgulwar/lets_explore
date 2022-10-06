@@ -1,5 +1,6 @@
 import React from 'react'
 import Form from './Form'
+import {Link } from 'react-router-dom'
 
 export default function footer(){
 
@@ -8,7 +9,7 @@ export default function footer(){
     }
 
     return (
-        <div className='container-fluid footer d-flex justify-content-around bg-dark bottom text-white '>
+        <div className='container-fluid footer d-flex mt-3 justify-content-around align-items-center bg-dark bottom text-white align-content-md-center' style={{height:`300px`}}>
 
             <div className='footer-details'>   
                 <img style={styles} src="https://www.pngall.com/wp-content/uploads/1/Trekking-PNG-HD.png" alt="trekkers logo" />
@@ -21,29 +22,31 @@ export default function footer(){
             
                 <ul className="nav flex-column">
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">
-                        Active
-                        </a>
+                    
+                       <Link to={"/"} > Home </Link> 
+                      
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">
-                        Link
-                        </a>
+                        
+                        About
+                       
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">
-                        Link
-                        </a>
+                        
+                        View Gallery
+                        
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link disabled">Disabled</a>
+                        
+                        Contact Us
+
                     </li>
                 </ul>
             </div>
             <div className='foot--nav'>  
 
             </div>
-            <div className='footer--form w-25 h-100 '>  
+            <div className='footer--form w-25 h-auto '>  
                 <Form />
              </div>
         </div>
