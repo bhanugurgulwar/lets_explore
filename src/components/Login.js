@@ -1,10 +1,10 @@
 import React,{useState} from 'react'
 import pass from '../pass'
-import { Link, redirect } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 export default function Login() {
-    
+    let logged = useNavigate();
     const [validate,setValidate]=useState([])
     
     console.log(pass)
@@ -31,7 +31,7 @@ export default function Login() {
         if(pass.find((i)=> i.userid=== validate.userid)){
         if(validate.password === pass[index].password ) {
             console.log("logged in")
-        
+            logged('/home')
 
         }else
         console.log("invalid password")
